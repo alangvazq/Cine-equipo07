@@ -1,0 +1,145 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  border-radius: 50px;
+  background-color: rgb(53, 50, 50);
+}
+
+header {
+  background: rgb(3, 57, 93);
+}
+
+body {
+  background: rgb(106, 185, 238);
+}
+
+.botones {
+  background-color: yellow;
+  color: black;
+  font-size: 19px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 100px;
+  height: 100px;
+}
+
+.botones:hover {
+  color: black;
+  background-color: burlywood;
+}
+
+.qna {
+  background-color: aquamarine;
+  color: khaki;
+
+  right: 10%;
+  top: 90%;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+}
+
+.pelis:hover {
+  background-color: black;
+  color: white;
+}
+
+.pelis button:hover {
+  background-color: green;
+  color: blue;
+}
+
+.pelis a:hover {
+  color: white;
+}
+
+.absolute {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  background-color: blueviolet;
+  padding: 1px;
+}
+
+.absolute {
+  top: 90%;
+  right: 10%;
+}
+
+article.articulo {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "cards cards" "cards cards" "cards cards" "cards cards";
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  gap: 15px;
+}
+
+.pelis {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cards img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+/* Tablet */
+@media (min-width: 900px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+.grid-container > {
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "header"
+    "navbar"
+    "division";
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "header header"
+      "navbar navbar"
+      "division division";
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: auto;
+    grid-template-areas: "header header header" / para que de las 12 columnas
+        default del grid,
+      estas tengan 3/ "navbar navbar navbar" "division division division";
+  }
+}
